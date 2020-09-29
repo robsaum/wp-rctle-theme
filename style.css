@@ -1,0 +1,189 @@
+/*
+ Theme Name:   RCTLE WordPress Theme 0.1
+ Text Domain:  RCTLE
+ Theme URI:    https://rctle.erau.edu
+ Description:  RCTLE WordPress Theme 
+ Author:       Arboretums
+ Author URI:   https://robsaum.com
+ Version:      0.1
+ Requires at least: 4.7
+ Requires PHP: 5.2.4
+ License: 	   GNU General Public License v3 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+ All files, unless otherwise stated, are released under the GNU General Public
+ License version 3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
+ Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. 
+ Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. 
+ Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+*/
+
+h1 {font-size: 130%}
+h2 {font-size: 120%}
+h3 {font-size: 110%}
+
+.navbar-brand {color: #fff !important; text-decoration: none;}
+.carousel-caption {font-size: 150%}
+.nav-link {
+  color: #00549a​​​ !important;
+  font-weight: 700;
+}
+
+.dropdown-toggle {
+  color: #fff !important
+}
+
+.page-section h1 {
+  margin-top: 30px
+}
+
+a {
+  text-decoration: underline;
+}
+a.nav-link {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.disabled {
+  color: #999 !important;
+}
+
+.active a.nav-link {
+  color: #f0c85a !important;
+  text-decoration: none;
+}
+
+.bd-placeholder-img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+@media (min-width: 768px) {
+.bd-placeholder-img-lg {
+  font-size: 3.5rem;
+}
+}
+
+/* Make the image fully responsive */
+.carousel-inner img {
+     width: 100%;
+     height: 100%;
+}
+
+a.carousel-control-prev,a.carousel-control-next {
+  color:#fff;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+  background-color: #000;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #f0c85a;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #f0c85a;
+}
+
+.carousel-black {
+    color: black;
+}
+
+.pre-footer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+  height: 5px;
+  opcaity: 0.5;
+  background-color: #a39161;
+  margin-bottom: 0px !important;
+}
+
+.category-section {
+  margin-bottom: 50px
+}
+.category-section div.card {
+  width: 80%; margin-left: auto;margin-right: auto;
+}
+
+footer {
+  padding-top: 3rem;
+  background-color: #333;
+}
+
+footer p {
+  margin-bottom: .25rem;
+  color: #fff;
+}
+
+#sub-footer {
+  background: #2e2e2e;
+  border-top: 1px solid #444;
+  padding: 20px 0px;
+  margin-bottom: -10%;
+}
+
+
+#sub-footer-core
+{
+  display: block;
+  max-width:1140px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  font-size: 85%; 
+  color: #AAA;
+}
+
+#sub-footer:before, #sub-footer:after { content:""; display:table;}
+#sub-footer:after { clear:both; }
+.footer-title {color:#ccc;}
+
+#footer-links a {color:#f0c85a !important;}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+#sub-footer-core a {
+  color: #8FC5FF;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* ERAU Colors:
+ERAU Web Blue: #00549a​​​;
+ERAU Web Gold​​​: #a39161;
+ERAU Web Yellow​: #f0c85a;
+EERAU Banner Dark Blue: #00002E;
+ERAU Banner Red: #C61D23;
+*/
+
