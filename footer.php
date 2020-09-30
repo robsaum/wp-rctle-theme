@@ -1,9 +1,7 @@
-<hr class="pre-footer">
-<footer class="text-muted">
-  <div class="container">
 
+<footer class="footer">
+  <div class="container">
       <div class="row">
-      
       <div class="col-md-3">
         <p><a href="https://rctle.erau.edu/"><img width="156" height="154" src="https://rctle.erau.edu/wp-content/uploads/2019/11/rctle_seal.png" class="image wp-image-49  attachment-full size-full" alt="RCTLE Logo" loading="lazy" style="max-width: 100%; height: auto;" /></a></p>
       </div>

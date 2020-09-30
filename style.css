@@ -17,9 +17,14 @@
  Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
 */
 
+html,body{
+    height: 100%
+}
+
 h1 {font-size: 130%; margin-top: 20px}
 h2 {font-size: 120%; margin-top: 20px}
 h3 {font-size: 110%; margin-top: 20px}
+h4 {font-size: 100%;}
 
 .navbar-brand {color: #fff !important; text-decoration: none;}
 .carousel-caption {font-size: 150%}
@@ -117,16 +122,6 @@ a.carousel-control-prev, a.carousel-control-next {
 	text-decoration: none;
 }
 
-.pre-footer {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -10px;
-  height: 5px;
-  opcaity: 0.5;
-  background-color: #a39161;
-  margin-bottom: 0px !important;
-}
 
 .category-section {
   margin-bottom: 50px
@@ -135,15 +130,33 @@ a.carousel-control-prev, a.carousel-control-next {
   width: 80%; margin-left: auto;margin-right: auto;
 }
 
+.post-navigation {
+	margin-top: 50px !important;
+}
+
+main {
+	margin-bottom: 300px !important
+}
 footer {
-  padding-top: 3rem;
-  background-color: #333;
+	clear: all;
+	padding-top: 3rem;
+	background-color: #333;
+	border-color: #a39161;
+	border-top: solid 5px #a39161;
 }
 
 footer p {
   margin-bottom: .25rem;
   color: #fff;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 
 #sub-footer {
   background: #2e2e2e;
@@ -191,6 +204,26 @@ footer p {
 
 .hidden {
 	display: none !important;
+}
+
+.text-limit {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.nav-item {
+	margin: 5px;
+}
+
+div.mission {
+	padding-bottom: 5px;
+	border-bottom: 2px solid #8A743E;
+}
+p.mission {
+	font-style: italic;
 }
 
 /* ERAU Colors:
