@@ -56,8 +56,9 @@
           ) );
     ?>
 
-      <form class="form-inline my-2 my-md-0">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-md-0" role="search" method="get" id="searchform" action="/">
+        <label class="screen-reader-text" for="s"></label>
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" value="" name="s" id="s" />
       </form>
   </div>
 </nav>

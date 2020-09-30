@@ -65,9 +65,10 @@ user-select: none;
 
 @media (min-width: 768px) {
 .bd-placeholder-img-lg {
-  font-size: 3.5rem;
+  	font-size: 3.5rem;
+	}
 }
-}
+
 
 /* Make the image fully responsive */
 .carousel-inner img {
@@ -105,6 +106,10 @@ a.carousel-control-prev,a.carousel-control-next {
 
 .carousel-black {
     color: black;
+}
+
+a.carousel-control-prev, a.carousel-control-next {
+	text-decoration: none;
 }
 
 .pre-footer {
@@ -177,6 +182,10 @@ footer p {
 .card {
   margin: 10px;
   padding: 10px;
+}
+
+.hidden {
+	display: none !important;
 }
 
 /* ERAU Colors:
