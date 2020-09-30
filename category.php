@@ -8,16 +8,16 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main" role="main">
+<main id="primary" class="container" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<section class="page-section">
+			<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="text-center">', '</h1>' );
+				the_archive_title( '<h1 class="page-title text-center">', '</h1>' );
 				the_archive_description( '<div class="archive-description" style="font-weight:600; font-size:120%; background:#eee; padding:10px; border: 1px solid #000; margin-bottom:20px; width:80%; margin-left: auto;margin-right: auto;">', '</div>' );
 				?>
-			</section>
+			</header>
 			
 			<section class="category-section">
 			<?php

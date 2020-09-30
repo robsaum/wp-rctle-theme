@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   </head>
   <body>
-    <header>
-
-
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- options: bg-light navbar-light justify-content-center -->
   <div class="container-xl">
@@ -63,6 +60,3 @@
   </div>
 </nav>
 
-
-
-</header>

@@ -12,14 +12,12 @@ get_header();
 
 <main id="primary" class="container" role="main">
 
-
-  
-
-		<section class="page-section error-404 not-found">
+		
 			<header class="page-header">
 				<h1 class="page-title text-center"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'rctle-slug' ); ?></h1>
 			</header><!-- .page-header -->
 
+		<section class="page-section error-404 not-found">
 			<div class="page-content text-center">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'rctle-slug' ); ?></p>
 					<?php get_search_form(); ?>

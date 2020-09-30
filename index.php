@@ -15,8 +15,10 @@
     	// This is not the blog posts index
     	$da_sidebar = get_sidebar();
     ?>
-    	<h1><?php the_title(); ?></h1>
-		<h4>Posted on <?php the_time('F jS, Y') ?></h4>
+    	<header class="page-header">
+    		<h1><?php the_title(); ?></h1>
+			<h4>Posted on <?php the_time('F jS, Y') ?></h4>
+		</header>
 	<?php
 	}
 ?>
