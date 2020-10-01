@@ -12,10 +12,8 @@ get_header();
 
 	<main id="primary" class="container" role="main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-		?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			
 			<header class="page-header">
     			<h1><?php the_title(); ?></h1>
 				<h4>Posted on <?php the_time('F jS, Y') ?></h4>
@@ -55,8 +53,7 @@ get_header();
 				<?php get_sidebar(); ?>
 			</div>
 
-
-
+	</div>
 	</main><!-- #main -->
 
 <?php
