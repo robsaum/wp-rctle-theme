@@ -15,31 +15,41 @@
 get_header();
 ?>
 
-	<main id="primary" class="container" role="main">
-
 		<?php while ( have_posts() ) : the_post(); ?>
 
-    	<header class="page-header">
-    		<h1><?php the_title(); ?></h1>
-			<h4>Posted on <?php the_time('F jS, Y') ?></h4>
-		</header>
+		<?php 	
+			if ( is_front_page() ) {
+		    //Hide the page title, timestamp, and sidebar. Remove container.
+				echo '<main id="primary" role="main">';
+				the_content(__('(more...)'));
+						    
+			} else {
+		    // This is not the blog posts index
+		    	echo '<main id="primary" class="container" role="main">';
+		    ?>
+		    	<header class="page-header">
+		    		<h1><?php the_title(); ?></h1>
+					<h4>Posted on <?php the_time('F jS, Y') ?></h4>
+				</header>
+				<div class="row">
+					<div class="col-md-8 order-md-1">
+						<section class="page-section">
+						<?php 
+							//Display the content
+							the_content(__('(more...)')); 
+						?>
+						</section>
+					</div>
+					<div class="col-md-4 order-md-2 mb-4">
+						<?php echo get_sidebar(); ?>
+					</div>
+				</div>
 
-		<div class="row">
-			<div class="col-md-8 order-md-1">
-				<section class="page-section">
-				<?php 
-					//Display the content
-					the_content(__('(more...)')); 
-				?>
-				</section>
-			</div>
-
+			<?php
+			}
+		?>
+	
 		<?php endwhile; // End of the loop. ?>
-
-			<div class="col-md-4 order-md-2 mb-4">
-				<?php get_sidebar(); ?>
-			</div>
-		</div>
 
 	</main><!-- #main -->
 
