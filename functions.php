@@ -79,4 +79,17 @@ function rctle_google_analytics() {
 add_action( 'wp_head', 'rctle_google_analytics', 10 );
 
 add_theme_support( 'align-wide' );    
+
+
+function rctle_register_query_vars( $vars ) {
+    $vars[] = 'author';
+    $vars[] = 'editor';
+    return $vars;
+}
+add_filter( 'query_vars', 'rctle_register_query_vars' );
+
+
+
+
+
 ?>

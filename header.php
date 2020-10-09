@@ -17,9 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <!-- First add the elements you need in <head>; then last, add: -->
-	<?php wp_head(); ?>
-
+   
+	 <?php wp_head(); ?>
   </head>
   <body>
 

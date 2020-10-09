@@ -294,6 +294,29 @@ figcaption {
   height: 100%;
 }
 
+.img-thumbnail {
+  margin: 10px !important;
+}
+
+.nav-links  {
+  display: inline-block;
+  width: 100%;
+  background-color: #dddddd;
+  margin-bottom: 50px
+}
+
+.nav-previous a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.nav-next a {
+  padding: 8px;
+  background-color: #dddddd;
+  float: right;
+  margin-top: -40px;
+}
 
 /* ERAU Colors:
 ERAU Web Blue: #00549a​​​;

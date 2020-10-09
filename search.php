@@ -6,8 +6,30 @@
  *
  */
 
-get_header(); ?>
+// From: https://www.smashingmagazine.com/2016/03/advanced-wordpress-search-with-wp_query/
+$args1 = array( 
+    'post_type'     => 'accommodation', 
+    'meta_key'      => 'city', 
+    'meta_value'        => 'Freiburg', 
+    'meta_compare'  => 'LIKE' );
 
+$args2 = array(
+    'post_type' => 'accommodation',
+    'meta_query'    => array(
+        array( 'key' => 'city', 'value' => 'Paris', 'compare' => 'LIKE' ),
+        array( 'key' => 'type', 'value' => 'room', 'compare' => 'LIKE' ),
+        'relation' => 'AND'
+    )
+);
+
+$the_query = new WP_Query( $args1 );
+$query = new WP_Query( array( 'author_name' => 'carlo', 'category_name' => 'webdesign' ) );
+
+
+
+
+
+get_header(); ?>
 <main id="primary" class="container" role="main">
 			<?php if ( have_posts() ) : ?>
 		            <header class="page-header">
@@ -24,11 +46,39 @@ get_header(); ?>
 	            				while ( have_posts() ) : the_post(); ?>
 	            					<?php // get_template_part( 'content', 'search' ); ?>
 		            				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		            				<p class="search-post-excerpt"><?php the_excerpt(); ?></p>
+		            				<p class="search-post-excerpt">
+
+
+										<?php if ( has_post_thumbnail() ) : ?>
+									    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									        	<?php the_post_thumbnail( 'thumbnail',array( 'class' => 'img-thumbnail float-left' ) ); ?>
+									    	</a>
+										<?php endif; ?>
+
+
+
+
+		            					<?php the_excerpt(); ?>
+		            				</p>
+		            				<br>
 	    	        				
 	        	    			<?php endwhile; ?>
 	        	    			<br>
-	            					<?php the_posts_navigation(); ?>
+	            					<?php //the_posts_navigation(); ?>
+
+
+
+
+										<?php the_posts_navigation( 
+											array(
+										    	'mid_size'  => 1, // 1 = no dropdowns, 2 = with dropdowns.
+										    	'prev_text' => __( '<i class="fas fa-arrow-circle-left"></i>  Back', 'textdomain' ),
+										    	'next_text' => __( 'Onward  <i class="fas fa-arrow-circle-right"></i>', 'textdomain' ),
+										    	'class'     => '',
+										    	'screen_reader_text' => __( 'Post navigation' ),
+												'aria_label'         => __( 'Posts' ),
+										) ); ?>
+
 								<br><br>
 	            			</section>
 	            		</div>
@@ -46,7 +96,10 @@ get_header(); ?>
 									<?php get_search_form( true ); ?>
 								</section>
 							</div>
-			        <?php endif; ?>
+			        <?php endif; 
+						/* Restore original Post Data */
+						wp_reset_postdata();
+			        ?>
 
 	            	<div class="col-md-4 order-md-2 mb-4">
 						<?php get_sidebar(); ?>
