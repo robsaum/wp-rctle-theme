@@ -15,3 +15,5 @@
         <?php dynamic_sidebar('sidebar-1' ); ?>
     </ul>
 <?php } ?>
+
+<?php // wp_tag_cloud('smallest=8&largest=22'); ?>

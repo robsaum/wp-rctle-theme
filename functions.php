@@ -89,7 +89,4 @@ function rctle_register_query_vars( $vars ) {
 add_filter( 'query_vars', 'rctle_register_query_vars' );
 
 
-
-
-
 ?>
