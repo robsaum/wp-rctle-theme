@@ -72,8 +72,8 @@ get_header(); ?>
 										<?php the_posts_navigation( 
 											array(
 										    	'mid_size'  => 1, // 1 = no dropdowns, 2 = with dropdowns.
-										    	'prev_text' => __( '<i class="fas fa-arrow-circle-left"></i>  Back', 'textdomain' ),
-										    	'next_text' => __( 'Onward  <i class="fas fa-arrow-circle-right"></i>', 'textdomain' ),
+										    	'prev_text' => __( '<i class="fas fa-arrow-circle-left"></i>  Older Posts', 'textdomain' ),
+										    	'next_text' => __( 'Newer Posts  <i class="fas fa-arrow-circle-right"></i>', 'textdomain' ),
 										    	'class'     => '',
 										    	'screen_reader_text' => __( 'Post navigation' ),
 												'aria_label'         => __( 'Posts' ),

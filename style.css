@@ -3,7 +3,7 @@
  Text Domain:  RCTLE
  Theme URI:    https://rctle.erau.edu
  Description:  RCTLE WordPress Theme 
- Author:       Arboretums
+ Author:       Robert Saum
  Author URI:   https://robsaum.com
  Version:      0.1
  Requires at least: 4.7
@@ -87,7 +87,7 @@ user-select: none;
 }
 
 a.carousel-control-prev,a.carousel-control-next {
-  color:#fff;
+  color:#fff; 
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -317,6 +317,7 @@ figcaption {
   float: right;
   margin-top: -40px;
 }
+
 
 /* ERAU Colors:
 ERAU Web Blue: #00549a​​​;
