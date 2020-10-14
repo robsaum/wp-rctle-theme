@@ -5,7 +5,7 @@
  Description:  RCTLE WordPress Theme 
  Author:       Robert Saum
  Author URI:   https://robsaum.com
- Version:      0.1
+ Version:      1.0
  Requires at least: 4.7
  Requires PHP: 5.2.4
  License: 	   GNU General Public License v3 or later
@@ -322,6 +322,11 @@ figcaption {
   margin-top: -40px;
 }
 
+.card-img-top text {font-size: 120%}
+
+.dark {
+  color: #000
+}
 
 /* ERAU Colors:
 ERAU Web Blue: #00549a​​​;
