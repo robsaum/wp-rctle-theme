@@ -88,5 +88,10 @@ function rctle_register_query_vars( $vars ) {
 }
 add_filter( 'query_vars', 'rctle_register_query_vars' );
 
-
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+       global $post;
+  return '...<br><a class="btn btn-primary" role="button" href="'. get_permalink($post->ID) . '"> Read More...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 ?>

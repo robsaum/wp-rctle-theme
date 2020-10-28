@@ -17,6 +17,19 @@ get_header();
 			<header class="page-header">
     			<h1><?php the_title(); ?></h1>
 				<h4>Posted on <?php the_time('F jS, Y') ?></h4>
+				<div class="container">
+				  <div class="row">
+				    <div class="col-">
+				      Filed under: 
+				    </div>
+				    <div class="col-">
+				      <?php the_category(); ?>
+				    </div>
+				    <div class="col-">
+				      <?php the_tags(); ?>
+				    </div>
+				  </div>
+				</div>
 			</header>
 		
 			
@@ -30,22 +43,6 @@ get_header();
 			?>
 			</section>
 			</div>
-
-
-
-		<!-- Need to hide prev/next if at end 
-			<h2>Page Navigation</h2>
-			<ul class="nav">
-			<?php
-				// echo '<li class="nav-item">';
-				// echo previous_post_link();
-				// echo '</li>';
-				// echo '<li class="nav-item">';
-				// if ( get_next_post_link() ) : echo next_post_link();  endif;
-				// echo '</li>';			
-			?>
-			</ul>
-		-->
 
 		<?php endwhile; // End of the loop. ?>
 

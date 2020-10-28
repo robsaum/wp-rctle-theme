@@ -30,6 +30,19 @@ get_header();
 		    	<header class="page-header">
 		    		<h1><?php the_title(); ?></h1>
 					<h4>Posted on <?php the_time('F jS, Y') ?></h4>
+					<div class="container">
+					  <div class="row">
+					    <div class="col-">
+					      Filed under: 
+					    </div>
+					    <div class="col-">
+					      <?php the_category(); ?>
+					    </div>
+					    <div class="col-">
+					      <?php the_tags(); ?>
+					    </div>
+					  </div>
+					</div>
 				</header>
 				<div class="row">
 					<div class="col-md-8 order-md-1">

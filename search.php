@@ -59,7 +59,22 @@ get_header(); ?>
 
 
 		            					<?php the_excerpt(); ?>
+		            					
 		            				</p>
+		            				<div class="container">
+									  <div class="row">
+									    <div class="col-">
+									      Filed under: 
+									    </div>
+									    <div class="col-">
+									      <?php the_category(); ?>
+									    </div>
+									    <div class="col-">
+									      <?php the_tags(); ?>
+									    </div>
+									  </div>
+									</div>
+
 		            				<br>
 	    	        				
 	        	    			<?php endwhile; ?>

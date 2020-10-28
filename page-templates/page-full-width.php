@@ -10,11 +10,9 @@
 get_header();
 ?>
 
+<main id="primary" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php 	
-			echo '<main id="primary" role="main">';
-	    ?>
     	<header class="page-header">
     		<h1><?php the_title(); ?></h1>
 			<h4>Posted: <?php the_time('F jS, Y') ?></h4>
