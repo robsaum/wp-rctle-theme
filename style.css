@@ -8,7 +8,7 @@
  Version:      1.0
  Requires at least: 4.7
  Requires PHP: 5.2.4
- License: 	   GNU General Public License v3 or later
+ License:      GNU General Public License v3 or later
  License URI:  https://www.gnu.org/licenses/gpl-3.0.html
  All files, unless otherwise stated, are released under the GNU General Public
  License version 3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
@@ -65,8 +65,8 @@ a.disabled {
 }
 
 .post {
-	margin-top: 50px !important;
-	margin-bottom: 20px !important;
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
 }
 
 .bd-placeholder-img {
@@ -80,8 +80,8 @@ user-select: none;
 
 @media (min-width: 768px) {
 .bd-placeholder-img-lg {
-  	font-size: 3.5rem;
-	}
+    font-size: 3.5rem;
+  }
 }
 
 
@@ -126,7 +126,7 @@ a.carousel-control-prev,a.carousel-control-next {
 }
 
 a.carousel-control-prev, a.carousel-control-next {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -140,20 +140,20 @@ a.carousel-control-prev, a.carousel-control-next {
 }
 
 .post-navigation {
-	margin-top: 50px !important;
+  margin-top: 50px !important;
 }
 
 main {
-	margin-bottom: 333px !important
+  margin-bottom: 333px !important
 }
 
 /* FOOTER */
 footer {
-	clear: all;
-	padding-top: 3rem;
-	background-color: #333;
-	border-color: #a39161;
-	border-top: solid 5px #a39161;
+  clear: all;
+  padding-top: 3rem;
+  background-color: #333;
+  border-color: #a39161;
+  border-top: solid 5px #a39161;
 }
 
 footer p {
@@ -185,11 +185,31 @@ footer p {
   color: #AAA;
 }
 
+@media (max-width: 880px) {
+  .footer {
+    position: relative; 
+    left:0;
+    width:100%;
+  }
+    #sub-footer-core
+  {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    font-size: 85%; 
+    color: #AAA;
+  }
+}
+
+
 #sub-footer:before, #sub-footer:after { content:""; display:table;}
 #sub-footer:after { clear:both; }
 .footer-title {color:#ccc;}
 #footer-links a {color:#f0c85a !important;}
 #sub-footer-core a { color: #8FC5FF;}
+
+
 
 .sr-only {
   position: absolute;
@@ -209,7 +229,7 @@ footer p {
 }
 
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 
 .text-limit {
@@ -221,15 +241,15 @@ footer p {
 }
 
 .nav-item {
-	margin: 5px;
+  margin: 5px;
 }
 
 div.mission {
-	padding-bottom: 5px;
-	border-bottom: 2px solid #8A743E;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #8A743E;
 }
 p.mission {
-	font-style: italic;
+  font-style: italic;
 }
 
 
