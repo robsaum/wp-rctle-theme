@@ -24,7 +24,8 @@
   <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <!-- options: bg-light navbar-light justify-content-center -->
-  <div class="container-xl">
+    <!-- <div class="collapse navbar-collapse"> -->
+   <div class="container-xl"> 
       <!-- Brand -->
       <a href="/" class="navbar-brand d-flex align-items-center">
           <i class="fas fa-chalkboard-teacher">&nbsp;&nbsp;</i>
@@ -38,15 +39,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
     <!-- Navbar links -->
     <?php 
+
+      /*
+      wp_nav_menu( array( 
+      'theme_location' => 'header-menu', 
+      'container_class' => 'custom-menu-class' ) ); 
+      */
+
       //Notes:  https://wp-bootstrap.github.io/wp-bootstrap-navwalker/
-      //        https://wp-bootstrap.github.io/wp-bootstrap-navwalker/
       //        https://github.com/wp-bootstrap/wp-bootstrap-navwalker
       wp_nav_menu( array(
                   'theme_location'    => 'header-menu',
-                  'depth'             => 2,
+                  'depth'             => 2,             // 1 = no dropdowns, 2 = with dropdowns.
                   'container'         => 'div',
                   'container_class'   => 'collapse navbar-collapse',
                   'container_id'      => 'collapsibleNavbar',
@@ -60,6 +66,7 @@
         <label class="screen-reader-text" for="s"></label>
         <input class="form-control" type="text" placeholder="Search" aria-label="Search" value="" name="s" id="s" />
       </form>
+
   </div>
 </nav>
 
