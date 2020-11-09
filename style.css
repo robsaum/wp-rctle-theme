@@ -411,13 +411,6 @@ li > a:only-child:after { content: ''; }
 
 
 
-
-
-
-
-
-
-
 /* Styling the columns block */
 .wp-block-columns {
   margin-bottom:0px;
