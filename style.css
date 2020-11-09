@@ -349,68 +349,70 @@ figcaption {
 }
 
 
-/**** NAV ***/
-.nav-links  {
-  display: inline-block;
-  width: 100%;
-  background-color: #dddddd;
-  margin-bottom: 50px
+ /* The navigation menu */
+ nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+	position: relative;
+	}	
+nav ul li {
+	display:inline-block;
+	}
+nav a {
+	display:block;
+	padding:0 3px;	
+	color:#FFF;
+	line-height: 50px; /* need for drop down to stay */
+	text-decoration:none;
+}
+nav a:hover { 
+	color: #a39161;
+}
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 45px; 	
+	background-color: #2E2E2E
+}	
+nav ul li:hover > ul {
+	display:inherit;
+	z-index: 1;
+}	
+nav ul ul li {
+	width:230px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+nav ul ul ul li {
+	position: relative;
+	top:-45px; 
+	left:230px;
+	background-color: #a39161;
+	color: #000
+}
+nav ul ul ul li a:hover {
+	color: #000
+}
+nav ul ul li {
+	border: 1px solid white;
+}	
+li > a:after { content:  ' ▼'; }
+li > a:only-child:after { content: ''; }
+
+.current-menu-item, .current_page_item a {
+	color: #a39161
 }
 
-.nav-previous a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
-}
-
-.nav-next a {
-  padding: 8px;
-  background-color: #dddddd;
-  float: right;
-  margin-top: -40px;
+.current-menu-item, .current_page_item ul li a {
+	color: #fff
 }
 
 
 
-/*
-div.custom-menu-class ul {
-    list-style: none;
-    list-style-type: none;
-}
-div.custom-menu-class li {
-      display: block;
-      transition-duration: 0.5s;
-      float: left;
-} 
 
-div.custom-menu-class li {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-} 
 
-div.custom-menu-class li:hover > ul,
-div.custom-menu-class li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-div.custom-menu-class li ul li {
-  clear: both;
-  width: 100%;
-}
-
-div.custom-menu-class a { 
-    color:#FFFFFF;
-    display: block;
-}
-
-*/
 
 
 

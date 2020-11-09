@@ -35,21 +35,26 @@
 
 
     <!-- Toggler/collapsibe Button -->
+    <!-- Removing Bootstrap menu 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    -->
 
     <!-- Navbar links -->
     <?php 
-
-      /*
+      // Using the default WordPress menu     
       wp_nav_menu( array( 
       'theme_location' => 'header-menu', 
-      'container_class' => 'custom-menu-class' ) ); 
-      */
+      'container'      => 'nav',
+      'menu_class'     => 'navigation-main'
+      //'container_class' => 'custom-menu-class' 
+      ) ); 
+      
 
       //Notes:  https://wp-bootstrap.github.io/wp-bootstrap-navwalker/
       //        https://github.com/wp-bootstrap/wp-bootstrap-navwalker
+      /*
       wp_nav_menu( array(
                   'theme_location'    => 'header-menu',
                   'depth'             => 2,             // 1 = no dropdowns, 2 = with dropdowns.
@@ -60,6 +65,7 @@
                   'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                   'walker'            => new WP_Bootstrap_Navwalker()
           ) );
+          */
     ?>
 
       <form class="form-inline my-2 my-md-0" role="search" method="get" id="searchform" action="/">
