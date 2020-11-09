@@ -31,9 +31,6 @@ function my_custom_theme_sidebar() {
 add_action( 'widgets_init', 'my_custom_theme_sidebar' );
 
 
-require_once get_template_directory() . '/nav/class-wp-bootstrap-navwalker.php';
-
-
 function filter_single_post_pagination($output, $format, $link, $post){
     $title = '<i class="fas fa-arrow-left"></i>&nbsp;&nbsp;' . get_the_title($post);
     $url   = get_permalink($post->ID);
