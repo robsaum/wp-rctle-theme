@@ -410,6 +410,38 @@ li > a:only-child:after { content: ''; }
 }
 
 
+/**** Pagination Nav ***/
+.nav-links  {
+  display: inline-block;
+  width: 100%;
+  background-color: #dddddd;
+}
+
+.nav-previous a {
+  display: block;
+  background-color: #dddddd;
+  color: blue;
+}
+.nav-previous a:hover {
+  color: navy;
+}
+.nav-next a {
+  background-color: #dddddd;
+  float: right;
+  margin-top: -50px;
+  color: blue;
+}
+.nav-next a {
+  background-color: #dddddd;
+  float: right;
+  margin-top: -50px;
+  color: blue;
+}
+.nav-next a:hover {
+  color: navy;
+}
+
+
 
 /* Styling the columns block */
 .wp-block-columns {
