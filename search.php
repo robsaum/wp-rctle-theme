@@ -58,7 +58,7 @@ get_header(); ?>
 
 
 
-		            					<?php the_excerpt(); ?>
+		            					<?php the_excerpt(); ?><br />
 		            					
 		            				</p>
 		            				<div class="container">
