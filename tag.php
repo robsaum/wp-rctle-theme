@@ -15,7 +15,10 @@ get_header();
     <?php if ( have_posts() ) : ?>
 
 	<header class="page-header">
-		<?php the_archive_title( '<h1 class="page-title text-center">', '</h1>' );	?>
+		<?php 
+			the_archive_title( '<h1 class="page-title text-center">', '</h1>' );	
+			the_archive_description( '<div class="archive-description" style="font-weight:600; font-size:120%; background:#eee; padding:10px; border: 1px solid #000; margin-bottom:20px; width:80%; margin-left: auto;margin-right: auto;">', '</div>' );
+		?>
 	</header><!-- .page-header -->
 
 	<div class="row">
@@ -25,11 +28,42 @@ get_header();
 	        <?php
                 // Start the Loop.
                 while ( have_posts() ) : the_post(); ?>
-                	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                	
+
+
+
+
+					<div class="card" style="">
+				  		<div class="card-body">
+				    		<h2 class="card-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				    		<small class="card-subtitle mb-2 text-muted"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?><br />
+				    			Filed under: <?php the_category( ', ' ); ?> |
+				    			<?php the_tags(); ?>
+				    		</small>
+				    			<p class="card-text"><?php if ( has_post_thumbnail() ) : ?>
+									    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+									        	<?php the_post_thumbnail( 'thumbnail',array( 'class' => 'img-thumbnail float-left' ) ); ?>
+									    	</a>
+										<?php endif; ?>
+										<?php 
+											the_excerpt(); 
+											// Display the excerpt unless empty, then display the first 40 words 
+											// if ( has_excerpt() ) { the_excerpt(); } else { echo wp_trim_words( get_the_content(), 40, '...' ); } 
+
+										?>
+										<!--
+											<br /> 
+											<a class="btn btn-primary" role="button" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> Read More&#8230;</a> 
+										-->
+									</p>
+				 	 </div>
+				</div>
+
+
+
+
 
                 	<?php
-                	// Display the excerpt unless empty, then display the first 40 words 
-					if ( has_excerpt() ) { the_excerpt(); } else { echo wp_trim_words( get_the_content(), 40, '...' ); } 
             	endwhile;
 
             	the_posts_navigation( 

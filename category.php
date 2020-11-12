@@ -29,13 +29,24 @@ get_header();
 				<div class="card" style="">
 				  <div class="card-body">
 				    <h2 class="card-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-				    <small class="card-subtitle mb-2 text-muted"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+				    		<small class="card-subtitle mb-2 text-muted"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?><br />
+				    			Filed under: <?php the_category( ', ' ); ?> |
+				    			<?php the_tags(); ?>
+				    		</small>
 				    <p class="card-text"><?php if ( has_post_thumbnail() ) : ?>
 									    	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 									        	<?php the_post_thumbnail( 'thumbnail',array( 'class' => 'img-thumbnail float-left' ) ); ?>
 									    	</a>
 										<?php endif; ?>
-										<?php the_excerpt(); ?><br />
+										<?php 
+											the_excerpt(); 
+											// Display the excerpt unless empty, then display the first 40 words 
+											// if ( has_excerpt() ) { the_excerpt(); } else { echo wp_trim_words( get_the_content(), 40, '...' ); } 
+										?>
+										<!-- 
+											<br />
+											<a class="btn btn-primary" role="button" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> Read More&#8230;</a>
+										-->
 									</p>
 				  </div>
 				</div>
