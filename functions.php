@@ -77,6 +77,11 @@ add_action( 'wp_head', 'rctle_google_analytics', 10 );
 
 add_theme_support( 'align-wide' );    
 
+// Enable post thumbnails
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 50, 50);
+// Image size for single posts
+// add_image_size( 'single-post-thumbnail', 590, 180 );
 
 function rctle_register_query_vars( $vars ) {
     $vars[] = 'author';
