@@ -26,6 +26,14 @@ get_header();
 			<section class="page-section">
 
 	        <?php
+
+
+   			echo '<div class="card" style=""><div class="card-body">';
+			echo do_shortcode( '[searchandfilter fields="category,post_tag" types="select,checkbox" headings="Category,Tags" hide_empty="1,1" show_count="1,1" hierarchical="1," empty_search_url="/" submit_label="Filter"]' );
+			echo '</div></div>';
+
+
+
                 // Start the Loop.
                 while ( have_posts() ) : the_post(); ?>
                 	
@@ -77,7 +85,28 @@ get_header();
 				) );
         
         		else :
-         			echo '<p>No posts found.</p>';
+         			
+
+        			// No results
+					get_template_part( 'template-parts/content', 'none' );
+
+
+
+					// No results
+					echo '<header class="page-header">';
+					the_archive_title( '<h1 class="page-title text-center">', '</h1>' );
+					echo '<div class="archive-description" style="font-weight:600; font-size:120%; background:#eee; padding:10px; border: 1px solid #000; margin-bottom:20px; width:80%; margin-left: auto;margin-right: auto;">
+						There are no results to display as too many filters were selected. Try choosing fewer tags.
+						</div>';
+					echo '</header>';
+					echo '<section class="category-section">';
+		   			echo '<div class="card" style=""><div class="card-body">';
+					echo do_shortcode( '[searchandfilter fields="category,post_tag" types="select,checkbox" headings="Category,Tags" hide_empty="1,1" hierarchical="1," show_count="1,1" empty_search_url="/" submit_label="Filter"]' );
+					echo '</div></div>';
+
+
+
+
                 endif;
             ?>
 			</section><!-- #primary -->
