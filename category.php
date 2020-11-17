@@ -100,9 +100,12 @@ get_header();
 
 
 <?php 
+
 	// Get the first category
 	$category = get_the_category();
 	$cat_size = sizeof($category);
+
+
 	if($cat_size>1) {
 		if(!empty($category)){$firstCategoryName = $category[1]->name;}
 		if(!empty($category)){$firstCategoryID = $category[1]->term_id;}
@@ -111,16 +114,54 @@ get_header();
 		if(!empty($category)){$firstCategoryName = $category[0]->name;}
 		if(!empty($category)){$firstCategoryID = $category[0]->term_id;}
 	}
+
+
+	// Get all tags for current category
+	$custom_query = new WP_Query( 'posts_per_page=-1&category_name='.$firstCategoryName."'" );
+	if ( $custom_query->have_posts() ) :
+		while ( $custom_query->have_posts() ) : $custom_query->the_post();
+			$posttags = get_the_tags();
+			if ( $posttags ) {
+				foreach( $posttags as $tag ) {
+					$all_tags[] = $tag->term_id .'|'.$tag->name .'['.$tag->count.'])';
+					$tag_checkbox[] = '<li class="cat-item cat-item-'.$tag->term_id.'"><label><input type="checkbox" name="ofpost_tag['.$tag->term_id.']" value="'.$tag->term_id.'" /> '.$tag->name.' ('.$tag->count.')</label></li>';
+				}
+			}
+		endwhile;
+	endif;
+
+	$tags_arr = array_unique( $tag_checkbox );
+	$list_tags = implode( "", $tags_arr );
+
 ?>
 
 <script type="text/javascript">
 	// Pass category name and ID from WordPress to jQuery
 	var cat_name	= '<?php echo $firstCategoryName; ?>';
 	var cat_ID 		= '<?php echo $firstCategoryID; ?>';	
-	var yoda 		= '<?php echo $cat_size; ?>';	
+	var cat_Size	= '<?php echo $cat_size; ?>';	
+	var tag_boxes	= '<?php echo $list_tags; ?>';
+	
+	
+
 	// Add the current category
  	$(document).ready(()=>{ 
 		$("#ofcategory").append("<option value='"+cat_ID+"' selected='selected'>"+ cat_name +"</option>");
+		//$("li.cat-item" ).parent().css( "visibility", "hidden" );
+		//$("li.cat-item" ).parent().remove();
+		
+		// Remove the tags
+		$("li.cat-item" ).remove();
+		// Display only the tags in the current category
+		$("input[value=Filter]" ).css( "color", "blue" );
+		$("form.searchandfilter li:nth-child(2)" ).append(tag_boxes);
+		$("form.searchandfilter li:nth-child(2)" ).css( "color", "blue" );
+		$("form.searchandfilter li:nth-child(2)" ).css( "display", "block" );
+		
+
+		//$("input[value=Filter]" ).parent().prepend( tag_boxes);
+
+
     });  
 </script>
 
