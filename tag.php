@@ -118,6 +118,49 @@ get_header();
 	</div>
 </main>
 
+<?php 
+
+	//$category = get_queried_object();
+	//echo $category->term_id;
+	//echo $category->count;
+
+	// Get the first category
+	$category = get_the_category();
+	$cat_size = sizeof($category);
+	if($cat_size>1) {
+		if(!empty($category)){$firstCategoryName = $category[1]->name;}
+		if(!empty($category)){$firstCategoryID = $category[1]->term_id;}
+
+	} else {
+		if(!empty($category)){$firstCategoryName = $category[0]->name;}
+		if(!empty($category)){$firstCategoryID = $category[0]->term_id;}
+	}
+?>
+
+<script type="text/javascript">
+	<?php 
+	/* Remove all current options
+		var select = document.getElementById("ofcategory");
+	    select.options.length = 0; // set to 0 to wipe out list, set to 1 to keep the 'All Categories'
+		select.options[select.selectedIndex].value = 'This is the selected message!!!';
+
+	 	$(document).ready(()=>{ 
+	        // $("#ofcategory").val('417').attr('selected', 'selected');
+			// $("#ofcategory option[value=417]").attr('selected', 'selected');
+			$("#ofcategory").append("<option value='"+cat_ID+"' selected='selected'>"+ cat_name +"</option>");
+	    });  
+	*/
+	?>
+	// Pass category name and ID from WordPress to jQuery
+	var cat_name	= '<?php echo $firstCategoryName; ?>';
+	var cat_ID 		= '<?php echo $firstCategoryID; ?>';	
+	// Add the current category
+ 	$(document).ready(()=>{ 
+		$("#ofcategory").append("<option value='"+cat_ID+"' selected='selected'>"+ cat_name +"</option>");
+    });  
+</script>
+
+
 <?php
 
 get_footer();

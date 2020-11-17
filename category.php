@@ -98,6 +98,34 @@ get_header();
 
 	</main>
 
+
+<?php 
+	// Get the first category
+	$category = get_the_category();
+	$cat_size = sizeof($category);
+	if($cat_size>1) {
+		if(!empty($category)){$firstCategoryName = $category[1]->name;}
+		if(!empty($category)){$firstCategoryID = $category[1]->term_id;}
+
+	} else {
+		if(!empty($category)){$firstCategoryName = $category[0]->name;}
+		if(!empty($category)){$firstCategoryID = $category[0]->term_id;}
+	}
+?>
+
+<script type="text/javascript">
+	// Pass category name and ID from WordPress to jQuery
+	var cat_name	= '<?php echo $firstCategoryName; ?>';
+	var cat_ID 		= '<?php echo $firstCategoryID; ?>';	
+	var yoda 		= '<?php echo $cat_size; ?>';	
+	// Add the current category
+ 	$(document).ready(()=>{ 
+		$("#ofcategory").append("<option value='"+cat_ID+"' selected='selected'>"+ cat_name +"</option>");
+    });  
+</script>
+
+
+
 <?php
 
 //get_sidebar();
