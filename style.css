@@ -117,8 +117,8 @@ a.carousel-control-prev,a.carousel-control-next {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   outline: black;
   background-size: 100%, 100%;
   border-radius: 50%;
@@ -130,13 +130,13 @@ a.carousel-control-prev,a.carousel-control-next {
 .carousel-control-next-icon:after
 {
   content: '>';
-  font-size: 55px;
+  font-size: 28px;
   color: #f0c85a;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
-  font-size: 55px;
+  font-size: 28px;
   color: #f0c85a;
 }
 
@@ -553,6 +553,44 @@ ul.post-categories li {
 .post-categories li:last-child {
   padding-right: 10px;
 }
+
+
+
+input[type=text], input[type=email], select, textarea {
+  width: 65%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+p label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: 700;
+  width: 70px;
+  vertical-align: top;
+}
+
+.wpcf7-form-control-wrap input, .wpcf7-form-control-wrap select, .wpcf7-form-control-wrap textarea {
+  margin-left: 100px;
+}
+
+
+@media print {
+    p.bodyText {font-family:georgia, times, serif;}
+
+    h3#stop1::before, h3#stop2::before, h3#stop3::before, h3#stop4::before, h3#stop5::before, h3#stop6::before, h3#stop7::before, h3#stop8::before, h3#stop9::before, h3#stop10::before {
+  content: "\25A2  ";
+
+    img {
+      display: none;
+    }
+  }
+}
+  
+
 
 
 
