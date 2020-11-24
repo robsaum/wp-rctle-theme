@@ -409,6 +409,9 @@ li > a:only-child:after { content: ''; }
 	color: #fff
 }
 
+p.sidebar a {
+  color: navy
+}
 
 /**** Pagination Nav ***/
 .nav-links  {
@@ -420,7 +423,7 @@ li > a:only-child:after { content: ''; }
 .nav-previous a {
   display: block;
   background-color: #dddddd;
-  color: blue;
+  color: #0054AD;
 }
 .nav-previous a:hover {
   color: navy;
@@ -429,13 +432,13 @@ li > a:only-child:after { content: ''; }
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: blue;
+  color: #0054AD;
 }
 .nav-next a {
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: blue;
+  color: #0054AD;
 }
 .nav-next a:hover {
   color: navy;
@@ -605,7 +608,9 @@ p label {
 }
   
 
-
+a {
+  color: #0054AD;
+}
 
 
 /* ERAU Colors:
