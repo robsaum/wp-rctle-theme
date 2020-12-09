@@ -423,7 +423,7 @@ p.sidebar a {
 .nav-previous a {
   display: block;
   background-color: #dddddd;
-  color: #0054AD;
+  color: blue;
 }
 .nav-previous a:hover {
   color: navy;
@@ -432,13 +432,13 @@ p.sidebar a {
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: #0054AD;
+  color: blue;
 }
 .nav-next a {
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: #0054AD;
+  color: blue;
 }
 .nav-next a:hover {
   color: navy;
@@ -578,6 +578,12 @@ p label {
 
 .wpcf7-form-control-wrap input, .wpcf7-form-control-wrap select, .wpcf7-form-control-wrap textarea {
   margin-left: 100px;
+}
+
+input.form-control {
+   padding: 20px 10px; 
+   width: 200px !important;
+   font-size: 2rem;
 }
 
 
