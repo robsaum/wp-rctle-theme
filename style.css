@@ -29,7 +29,7 @@ body {
 }
 h1, h2, h3 {margin-top: 25px; }
 h1 {
-  font-size: 2px;
+  font-size: 20px;
   font-size: 2rem;
 }
 h2 {
@@ -423,7 +423,7 @@ p.sidebar a {
 .nav-previous a {
   display: block;
   background-color: #dddddd;
-  color: blue;
+  color: #0054AD;
 }
 .nav-previous a:hover {
   color: navy;
@@ -432,13 +432,13 @@ p.sidebar a {
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: blue;
+  color: #0054AD;
 }
 .nav-next a {
   background-color: #dddddd;
   float: right;
   margin-top: -50px;
-  color: blue;
+  color: #0054AD;
 }
 .nav-next a:hover {
   color: navy;
@@ -618,6 +618,17 @@ a {
   color: #0054AD;
 }
 
+.carousel-caption {
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.carousel-caption h2 {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
 
 /* ERAU Colors:
 ERAU Web Blue: #00549a​​​;
