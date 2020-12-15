@@ -103,6 +103,13 @@ user-select: none;
   }
 }
 
+.menu-item, .sub-menu {
+  z-index: 10 !important;
+}
+
+.carousel-inner, .carousel-item {
+  z-index: 3;
+}
 
 /* Carousel: Make the image fully responsive */
 .carousel-inner img {
@@ -400,6 +407,7 @@ nav ul ul li {
 }	
 li > a:after { content:  ' ▼'; }
 li > a:only-child:after { content: ''; }
+
 
 .current-menu-item, .current_page_item a {
 	color: #a39161
