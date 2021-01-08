@@ -626,6 +626,14 @@ a {
   color: #0054AD;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align:center
+}
+
 .carousel-caption {
   font-size: 18px;
   font-size: 1.8rem;
