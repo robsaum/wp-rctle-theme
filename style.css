@@ -28,6 +28,7 @@ body {
   font-size: 1.4rem;
 }
 h1, h2, h3 {margin-top: 25px; }
+h1, h2, h3, h4 {font-weight: 900;}
 h1 {
   font-size: 20px;
   font-size: 2rem;
@@ -62,6 +63,13 @@ h4 {
 .page-header {
   margin-bottom: 20px;
 }
+
+
+img {
+  width: auto;
+    max-width: 100%;
+    height: auto;
+  }
 
 
 /* Links */
@@ -358,63 +366,63 @@ figcaption {
 
  /* The navigation menu */
  nav ul {
-	padding: 0;
+  padding: 0;
     margin: 0;
-	list-style: none;
-	position: relative;
-	}	
+  list-style: none;
+  position: relative;
+  } 
 nav ul li {
-	display:inline-block;
-	}
+  display:inline-block;
+  }
 nav a {
-	display:block;
-	padding:0 3px;	
-	color:#FFF;
-	line-height: 50px; /* need for drop down to stay */
-	text-decoration:none;
+  display:block;
+  padding:0 3px;  
+  color:#FFF;
+  line-height: 50px; /* need for drop down to stay */
+  text-decoration:none;
 }
 nav a:hover { 
-	color: #a39161;
+  color: #a39161;
 }
 nav ul ul {
-	display: none;
-	position: absolute; 
-	top: 45px; 	
-	background-color: #2E2E2E
-}	
+  display: none;
+  position: absolute; 
+  top: 45px;  
+  background-color: #2E2E2E
+} 
 nav ul li:hover > ul {
-	display:inherit;
-	z-index: 1;
-}	
+  display:inherit;
+  z-index: 1;
+} 
 nav ul ul li {
-	width:230px;
-	float:none;
-	display:list-item;
-	position: relative;
+  width:230px;
+  float:none;
+  display:list-item;
+  position: relative;
 }
 nav ul ul ul li {
-	position: relative;
-	top:-45px; 
-	left:230px;
-	background-color: #a39161;
-	color: #000
+  position: relative;
+  top:-45px; 
+  left:230px;
+  background-color: #a39161;
+  color: #000
 }
 nav ul ul ul li a:hover {
-	color: #000
+  color: #000
 }
 nav ul ul li {
-	border: 1px solid white;
-}	
+  border: 1px solid white;
+} 
 li > a:after { content:  ' ▼'; }
 li > a:only-child:after { content: ''; }
 
 
 .current-menu-item, .current_page_item a {
-	color: #a39161
+  color: #a39161
 }
 
 .current-menu-item, .current_page_item ul li a {
-	color: #fff
+  color: #fff
 }
 
 p.sidebar a {
@@ -601,24 +609,24 @@ input.form-control {
 
     h3#stop1::before, h3#stop2::before, h3#stop3::before, h3#stop4::before, h3#stop5::before, h3#stop6::before, h3#stop7::before, h3#stop8::before, h3#stop9::before, h3#stop10::before {
   content: "\25A2  ";
-	}
-	
+  }
+  
     img {
-		display: none !important;
-		visibility: hidden !important;
+    display: none !important;
+    visibility: hidden !important;
     }
-	figure {
-		display: none !important;
-		visibility: hidden !important;
-	}
-	.mission {
-		display: none !important;
-		visibility: hidden !important;
-	}
-	footer {
-		display: none !important;
-		visibility: hidden !important;
-	}
+  figure {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  .mission {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  footer {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
   
 
