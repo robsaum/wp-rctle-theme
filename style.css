@@ -655,11 +655,17 @@ a {
   font-weight: 700;
 }
 
+/* Fix Low Contrast of Bootstrap Btn */
+.btn-primary {
+  background:#00549a !important;
+  border-color: #fff;
+}
+
+
 /* ERAU Colors:
-ERAU Web Blue: #00549a​​​;
-ERAU Web Gold​​​: #a39161;
-ERAU Web Yellow​: #f0c85a;
+ERAU Web Blue: #00549a;
+ERAU Web Gold: #a39161;
+ERAU Web Yellow: #f0c85a;
 EERAU Banner Dark Blue: #00002E;
 ERAU Banner Red: #C61D23;
 */
-
