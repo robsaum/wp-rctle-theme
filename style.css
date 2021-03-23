@@ -128,7 +128,8 @@ user-select: none;
 .carousel-caption {font-size: 150%}
 
 a.carousel-control-prev,a.carousel-control-next {
-  color:#fff; 
+  color:#fff;
+  z-index:4 !important;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
